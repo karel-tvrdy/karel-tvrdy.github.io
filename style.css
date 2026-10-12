@@ -1,0 +1,126 @@
+:root {
+  --bg: #f6faf9;
+  --surface: #ffffff;
+  --text: #13201e;
+  --muted: #55625f;
+  --accent: #00796b;
+  --accent-soft: #e0f2ef;
+  --border: #dbe5e3;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0e1615;
+    --surface: #16211f;
+    --text: #e6efed;
+    --muted: #9fb0ac;
+    --accent: #4fd1bd;
+    --accent-soft: #173431;
+    --border: #26332f;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
+  -webkit-text-size-adjust: 100%;
+}
+
+a { color: var(--accent); }
+
+.wrap {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 24px 16px 48px;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  font-size: 15px;
+}
+
+.topbar .brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.topbar .brand img { width: 32px; height: 32px; border-radius: 8px; }
+
+.hero {
+  text-align: center;
+  padding: 48px 0 24px;
+}
+
+.hero img {
+  width: 112px;
+  height: 112px;
+  border-radius: 26px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+}
+
+.hero h1 { font-size: 40px; margin: 20px 0 4px; letter-spacing: -0.5px; }
+.hero .tagline { font-size: 19px; color: var(--muted); margin: 0; }
+
+.badge {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.features {
+  display: grid;
+  gap: 14px;
+  margin: 32px 0;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 18px 20px;
+}
+
+.card h2 { font-size: 18px; margin: 0 0 6px; }
+.card p { margin: 0; color: var(--muted); }
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 20px;
+  justify-content: center;
+  margin: 24px 0 8px;
+}
+
+footer {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Pravni dokumenty */
+.doc h1 { font-size: 30px; margin: 32px 0 4px; }
+.doc .effective { color: var(--muted); margin: 0 0 24px; }
+.doc h2 { font-size: 19px; margin: 28px 0 8px; }
+.doc p { margin: 0 0 10px; }
+.doc ul { margin: 0 0 10px; padding-left: 22px; }
+.doc li { margin-bottom: 6px; }
